@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <h1>Forms in HTML</h1>
+    <form action="/submit.php"></form>
+    <div>
+        <label for="name"> Name</label>
+        <input id="name" type="text" placeholder="Enter Name" required>
+    </div>
+    <div> <label for="phone">Phone</label>
+
+        <input id="phone" type="tel" placeholder="Enter phone Number" required>
+
+    </div>
+    <label for="email"> Email</label>
+    <input id="email" type="email" placeholder="Enter Email" required>
+    </div>
+
+
+    <div>
+        <label for="password"> Password</label>
+        <input id="password" type="password" placeholder="Enter Password" required>
+    </div>
+    <!-- date kaise input lete hai -->
+    <div>
+        <label for="dob"> Email</label>
+        <input id="dob" type="date" placeholder="Date of Berth" required>
+    </div>
+    <!-- dropdown or option kaise lete hai -->
+    <div>
+        <label for="gender"> Gender</label>
+        <select name="gender" id="gender" required>
+            <option value="disable">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+    </div>
+
+
+    <!-- radio buttons for Subscription Plan jab ek particular value ko add karna hota hai-->
+    <div>
+        <h2>Subcription Plan </h2>
+        <input id="basic" type="radio" name="subcription" value="basic">
+        <label for="basic">Basic</label>
+        <input id="medium" type="radio" name="subcription" value="medium">
+        <label for="medium">Medium</label>
+        <input id="premium" type="radio" name="subcription" value="premium">
+        <label for="premium">Premium</label>
+    </div>
+
+    <!-- Checkbook for agreeing the form -->
+
+    <div>
+        <input id="terms" type="checkbox" required>
+        <label for="terms"> I agree to terms and condition</label>
+    </div>
+    <!-- textarea comments -->
+    <div>
+        <label for="comments">Comments</label>
+        <textarea name="" id="comments" placeholder="Enter your comments" rows="4"></textarea>
+    </div>
+
+    <!-- submit button -->
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    <!-- End of Forms -->
+</body>
+
+</html>
