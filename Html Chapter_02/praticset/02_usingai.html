@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #111;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 900px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .slides {
+            display: flex;
+            width: 500%;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        /* Navigation buttons */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 15px;
+        }
+
+        .next {
+            right: 15px;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>PC Wallpapers Slider</h2>
+
+    <div class="slider">
+        <div class="slides" id="slides">
+            <img src="https://rukminim2.flixcart.com/image/480/480/kxdl3m80/wall-decoration/y/6/p/pc-nature-beauty-wallpaper-paper-poster-1-vp-201221-611-poster-original-imag9uh4w8ugk3bf.jpeg?q=90" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAS_wes7mtvEJ9Z0OHRzfR9lnq0fkjU3InQ&s" alt="">
+            <img src="https://wallpaper.forfun.com/fetch/b4/b499df2260fd44cf6cd641d011017501.jpeg" alt="">
+            <img src="https://cdn.wallpapersafari.com/78/5/TbHAjP.jpg" alt="">
+            <img src="https://getwallpapers.com/wallpaper/full/7/e/5/931069-pc-wallpaper-nature-hd-1920x1080-for-mac.jpg" alt="">
+        </div>
+
+        <button class="btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="btn next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script>
+        let index = 0;
+        const slides = document.getElementById("slides");
+        const total = slides.children.length;
+
+        function showSlide() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function moveSlide(step) {
+            index = (index + step + total) % total;
+            showSlide();
+        }
+
+        // Auto slide every 3 seconds
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
+    </script>
+</body>
+
+</html>
