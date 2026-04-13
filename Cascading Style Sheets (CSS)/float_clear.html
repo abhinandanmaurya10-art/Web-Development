@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+
+    <style>
+        .cards {
+            border: 2px solid black;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        img {
+            width: 230px;
+            margin-left: auto; /* image ko right side push karega */
+        }
+
+        .card {
+            border: 2px solid aqua;
+            padding: 10px;
+            margin: 10px;
+        }
+        .card:nth-child(3){
+            background-color: blueviolet;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cards">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi debitis,
+            reprehenderit accusantium, quod impedit perspiciatis quisquam culpa animi esse,
+            aperiam nesciunt fuga provident beatae molestiae facere inventore vitae asperiores! Autem.
+        </div>
+
+        <img src="https://cdn.pixabay.com/photo/2020/08/11/03/08/boat-5479122_1280.jpg" alt="Boat">
+    </div>
+
+    <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae sapiente exercitationem minus, tempore aliquid deleniti totam ipsum rem neque cum mollitia, dolorum consequatur, libero porro nobis dolores? Unde ab consectetur voluptatibus ipsum, omnis nulla earum eligendi laboriosam quibusdam eveniet minima nisi exercitationem dolor! Voluptatem mollitia, voluptate accusamus aspernatur, odio quos illo numquam sint fugit impedit, esse sapiente odit blanditiis. Modi delectus voluptates placeat quisquam quibusdam amet commodi fuga sit ab provident. Nulla dignissimos tempore corporis reiciendis asperiores soluta! Excepturi recusandae in dignissimos assumenda consequatur ipsum laudantium. Assumenda est temporibus deleniti voluptatibus minus ipsum, repellendus laborum mollitia expedita aliquam unde blanditiis rem consequatur sequi laudantium ipsam veniam enim cupiditate maxime? Nobis atque, ipsa labore autem reiciendis consequatur beatae quod debitis, accusantium aperiam sunt minus fugiat impedit nihil corrupti vero illum explicabo quis molestias nisi quam assumenda? Quos exercitationem tempore sapiente dolorem facere maxime saepe ipsum et molestiae, velit temporibus tenetur quia ut fugit aut doloribus minima ratione vero animi cum soluta voluptate nisi nulla omnis! Nihil cumque magni corrupti et alias. Hic quos adipisci quam ipsa reiciendis ut deleniti! Maxime quis sit excepturi quas soluta. Laborum corporis similique ipsam ratione obcaecati nobis cumque? Sunt neque animi quod id omnis nemo consequuntur explicabo. Nisi incidunt harum perferendis distinctio, quaerat sit ut fugiat aliquam recusandae. Dolores beatae dignissimos illum ipsum fugit, officiis nihil blanditiis facere? Quia vero dolore error eligendi illo omnis at dolores molestiae sint et facere animi pariatur praesentium iure inventore suscipit laudantium culpa, deleniti rerum sapiente nobis quae quos. Reprehenderit ea, quas tempora saepe explicabo nisi numquam ipsam voluptas doloribus accusantium dolor et rem maiores porro laborum? Rem commodi voluptas, doloremque quae dolor, alias quasi explicabo quibusdam eius iusto, debitis fugiat incidunt iure nostrum sapiente! Tempore vitae consequatur maiores quia voluptas? Voluptatum velit ex error ad praesentium sunt. Doloremque ab sapiente molestiae, blanditiis nisi magni sed distinctio eaque magnam hic. Doloribus sint, veritatis architecto incidunt nisi nam ea quo ut vel qui quos provident aliquid soluta molestias sed recusandae laboriosam odit corporis, nobis iste corrupti inventore quaerat veniam enim? Porro dolorem distinctio ea at dolores esse voluptatibus, autem possimus a cupiditate modi temporibus cum.
+    </div>
+
+    <div class="card">Card 3</div>
+
+</body>
+
+</html>

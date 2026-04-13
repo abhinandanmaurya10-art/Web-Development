@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+  <style>
+    h1{
+        color: aqua;   /*Element selector ki specificity sabse kam hoti hai*/
+    }
+
+    .yellow{
+        color: yellow; /*Class selector ki specificity element se zyada hoti hai*/
+    }
+          
+    .cred{
+        color: red;    /*Agar ek hi element par multiple classes lagi ho, toh sab apna-apna style dene ki koshish karti hain*/
+    }
+
+    .cpurple{   
+        color: purple;  
+        /*Agar h1 ka style comment kar diya jaaye 
+          aur teenon classes (.yellow, .cred, .cpurple) same property define karein,
+          toh CSS specificity aur cascade rule apply hota hai.
+
+          Specificity yahan same hogi (sab class selectors hain),
+          toh jo class **baad me likhi hoti hai**, wahi jeet jaati hai.
+
+          Isliye agar yahan color: purple; hota,
+          toh purple color show hota — kyunki yeh last declared class hai.
+
+          agar kisi bhi selector ko id ke through select karte hai to id ki priority pahle hogi.
+        */
+    }
+
+    [data-x= a]{  /* attribute selectors*/
+        background-color: red;
+    }
+
+    /* priority = Inline Selectors > ID Selectors > Class or Attribute Selectors > Element selectors > Universal Selectors */ 
+</style>
+
+</head>
+<body>
+    <div class="yellow cred cpurple"  data-x="a">
+     CSS Specificity
+    </div>
+</body>
+</html>

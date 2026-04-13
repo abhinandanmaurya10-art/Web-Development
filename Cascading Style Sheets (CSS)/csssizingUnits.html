@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units</title>
+    <style>
+
+        *{
+            margin: 0;      /* Saari elements ka default margin hata diya */
+            padding: 0;     /* Saari elements ka default padding hata diya */
+        }
+
+        html{
+            font-size: 15px;   /* Root font-size 15px set kiya, REM isi ke base par kaam karega */
+        }
+
+        .box{
+            box-sizing: border-box;   /* Width/height ke andar padding aur border include ho jayenge */
+            border: 2px solid black;  /* Box ke around border */
+            /* width: 2048px;  Yeh fixed width thi, use comment kiya */
+            
+            width: 80vw;  /* VW = Viewport Width ka 80% le lega, screen size ke hisaab se adjust hoga */
+            height: 10vh; /* VH = Viewport Height ka 10% */
+            
+            margin: auto;            /* Box ko horizontally center me rakhne ke liye */
+            background-color: aquamarine;   /* Box ka background color */
+        }
+
+        .container{
+            box-sizing: border-box;    /* Border-box model use kiya */
+            border: 2px solid black;   /* Container ko border diya */
+            /* width: 2048px;  Fixed width comment kiya */
+            
+            width: 80vw;   /* Container width viewport ke 80% ke barabar */
+            /*height: 80vh;   Height viewport ke 80% ke barabar */
+            min-height: 80vh;  /*it auto adjust the height of the box*/
+            
+            margin: 23px auto;   /* Top-bottom margin 23px aur left-right center */
+            font-size: 18px;     /* Container ka default font-size */
+            
+            background-color: aquamarine;   /* Container background color */
+        }
+
+        .container > div{
+            font-size: 2rem;   /* 1rem = 15px (html se), to 2rem = 30px. 
+                                  Rem root font-size ko follow karta hai. */
+            /* width: 50%;  /*      Paragraph ki width ko 50 percent kar dega */               
+        /* }
+          
+        .container > div > div{
+            border: 2px solid blue;
+            width: 50%;  /* ye apne parent width ka 50% hissa le lega.*/
+        }  */
+        .mycont{
+            border: 2px solid rgba(15, 3, 3, 0.892);
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            /* width: 100vmin; */
+            width: 80vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        This is a Box.
+    </div>
+
+    <div class="container">
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt inventore quos odit nesciunt ea,
+           optio dolor totam laborum! Reprehenderit voluptates architecto temporibus perspiciatis quod inventore officia,
+           sapiente qui cupiditate neque sequi minus vitae necessitatibus in aspernatur excepturi ipsum accusantium doloribus tenetur tempore harum deserunt natus dolores.
+           Recusandae odio totam, nam voluptates minima doloremque id facere ea!
+
+           <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque pariatur sint eum laudantium ut amet vel illo eveniet incidunt, voluptatem dolore aperiam id?
+           </div>
+        </div>
+        <div>
+           <!-- Expand this tom see that this container will adjust its height automatically lorem3255 -->
+        </div>
+        
+    </div>
+    <div class="mycont">
+        I am another Container inside div
+    </div>
+    
+</body>
+</html>

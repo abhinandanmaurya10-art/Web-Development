@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            overflow: auto;  /* overflow: scroll karne se ek box ke ander text scroll mode me adjust ho jayega */
+            white-space: nowrap; /* text ko horizentally rakhega nichhe nhi girne dega */
+            text-overflow: ellipsis /* text box ke pass khatam hone ke baad ... lg jata hai */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusantium facere alias temporibus sit illum aspernatur voluptas,
+        voluptatibus quaerat natus quia laudantium, saepe a perferendis odit ipsam sapiente enim dolor laboriosam. Minima laboriosam dolorum rem? 
+        Accusamus, quas. Exercitationem fugit, deserunt quaerat voluptatibus velit impedit eveniet.
+    </div>
+</body>
+</html>

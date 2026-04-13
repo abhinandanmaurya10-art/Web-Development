@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!-- Element Selectors -->
+     <!-- isme har elment ko alag alag karna padta hai -->
+    <style>
+        div{   
+            /* background-color: red; */
+        }
+
+        /* class selector  */
+         .red{
+            background-color: red;
+        } 
+
+        /* ID Selector */
+        /* Yeh CSS sirf usi element par apply hogi jiska id="heading1" hai. */
+
+         #green{
+            background-color: green;
+        } 
+
+        /* Child Selectors */
+        /* agar div ka koi child hoga to usme apply hoga  */
+
+        div > p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Decendent Selector */
+        /* iska matalab agar kisi bhi div ke ander p hoga to change ho jayega */
+        div  p {
+            color: blue;
+            background-color: brown;
+        }
+
+        /* Universal selector */
+        /* iska matalab sabko ak sath chipka dena */
+        *{
+
+            margin: 0;
+            padding: 0;
+           
+        }
+
+     /* pseudo selectors */
+
+     a:visited{
+        color: blue;   /*visit karne ke baad colour change*/
+     }
+     a:link{    /* visit karene ke baad colour change */
+        color: green;
+     }
+
+
+     a:active{  /* jab click kar rahe ho tab colour red ho jaye */
+        background-color: red;
+     }
+
+     
+     a:hover{  /*  Jab mouse element par aaye */
+        background-color: blueviolet;
+     }
+    
+     p:first-child{  /* if p is frist child of its parents then aooly this property*/
+        background-color: aqua;
+     }
+
+     p:last-child{
+        background-color: aquamarine;
+     }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+    <p>I am Frist</p>
+    <p>I am Second</p>
+    </main>
+     <div class="one"
+     I am Selectors
+     ></div>
+    <div class="red">
+        <!-- iska matalab jaha par class hoga waha ka div ka colour kavel chage kar do. -->
+        <h1>I am a div</h1>
+      <article>
+        <p>I am Paragraph.Insid Div</p>
+        </article>
+    </div>
+    <div id="green">
+        <h2> I am another div.</h2>
+    </div>
+
+    <a href="https://www.google.com">Click Here Go to Google </a>
+    <a href="https://www.facebook.com">Click Here Go to Facebook </a>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Bokmodel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .box {
+            background-color: aqua;
+        }
+
+        .box1 {
+            padding: 10px;     /* Box ke andar ka space (inner gap) set karta hai */
+            border: 2px solid blue;    /* Box ke bahar 2px ki blue border lagata hai */
+            margin: 25px;    /* Box ke bahar ka space (outer gap) set karta hai */
+            height: 200px;     /* Box ki height fix 200px set karta hai */
+            box-sizing: border-box;    /* Border aur padding ko total height/width me include karta hai */
+
+
+            /* Total Width = Width + Left padding + Right Padding + Left Border + Right Border +Left margin + Right margin */
+            /* Total Height = Width + Top Padding + Bottom Padding + Top Border + Bottom Border + Top margin + Bottom Margin */
+        }
+
+        .box2 {
+            background-color: green;
+            padding: 10px;     /* Box ke andar ka space (inner gap) set karta hai */
+            border: 2px solid rgba(12, 12, 15, 0.453);    /* Box ke bahar 2px ki blue border lagata hai */
+            margin: 5px;    /* Box ke bahar ka space (outer gap) set karta hai */
+            height: 200px;     /* Box ki height fix 200px set karta hai */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">
+        <h2>I am a Box</h2>
+    </div>
+    <div class="box box2">
+        <h2>I am another Box</h2>
+    </div>
+
+</body>
+
+</html>

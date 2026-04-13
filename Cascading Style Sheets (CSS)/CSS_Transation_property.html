@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+
+    <style>
+        .container{
+            background-color: purple;
+            width: 50vw;
+            height: 30vh;
+
+        }
+        .box{
+            background-color: aqua;
+            width: 10vh;
+            height: 10vh;
+            transition-property: background-color,translate;  /* or we can also use all */
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+
+            /* shortcut transition: all,3s,ease-in-out,1s; */ 
+        }
+
+        .translate{
+            transform: translateX(10vh) translateY(10vh);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+
+</body>
+</html>

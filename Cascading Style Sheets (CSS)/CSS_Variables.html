@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=|, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+   <style>
+    :root{  /* ye ek css variable hai */
+        --color: blue;
+        --seccolor: rgb(174,174,222);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .nav{
+        background-color: aqua;
+    }
+    ul{
+        display:flex;
+    }
+    ul li{
+        list-style: none;
+        padding: 34px;
+        border: 12px solid rgb(56, 49, 49);
+    }
+    ul li:first-child{
+        --color:rgb(243,87,8);
+        background-color: var(--color);
+    }
+    .container{
+        background-color: var(--seccolor); /* ye uper ke variable ka same color leke show karega */
+    }
+   </style>
+
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at esse in vero cumque,
+        autem ratione? Officiis incidunt quaerat ipsum nisi iste expedita maxime dignissimos eveniet,
+        eaque culpa quis praesentium vero temporibus. Quasi atque beatae, aut perspiciatis voluptatum vitae doloribus facere, architecto quos tempora libero.
+        
+    </div>
+</body>
+</html>
